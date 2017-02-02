@@ -41,6 +41,21 @@
             <div class="row">
                 <div class="col-md-4">
                     <h2>テンプレを選択</h2><br />
+                    <label>種類を選択</label>
+                        <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="HPSP" id="option1" autocomplete="off">HP
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="HPSH" id="option2" autocomplete="off">SP
+                </label>
+            </div>
+                    <br />
+                    <label>手数料を選択</label>
+                <div class="btn-group" data-toggle="buttons">
+                        
+                </div>
+                    
 		    <div class="input-group">
                     <input class="form-control" data-bind="value: personName"></input>
                     <span data-bind="text: personAge"></span>
@@ -59,16 +74,7 @@
         <script src="Scripts/bootstrap.js"></script>
         <script src="Scripts/respond.js"></script>
         <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
-        <script type="text/javascript">
-            function myViewModel(){
-                this.personName = ko.observable();
-                this.personAge = ko.computed(function(){
-                    return this.personName();
-                }, this);
-            };
-            ko.applyBindings(new myViewModel());
-        
-        </script>
+        <script type="text/javascript" src="Models/dataModels.js"></script>
 
     </body>
 </html>
