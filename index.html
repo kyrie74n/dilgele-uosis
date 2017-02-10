@@ -87,22 +87,20 @@
                     <label>税率を選択</label>
                     <div class="btn-group form-group" data-toggle="buttons" data-bind="radio: tax">
                         <label class="btn btn-default">
-                            <input type="radio" name="taxOpt" value="10" />10%
+                            <input type="radio" name="taxOpt" value="100" />10%
                         </label>
                         <label class="btn btn-default">
-                            <input type="radio" name="taxOpt" value="30" />30%
+                            <input type="radio" name="taxOpt" value="300" />30%
                         </label>
                     </div>
                     <hr />
                     
-                    <label>売上利益集計</label><br />
-                    <span data-bind="text: profit"></span>
-                    
-                    <hr />
-                    <label>test</label>
-                    <div class="input-group">
-                            <input class="form-control"></input>
-                    </div>
+                    <label>単価</label><br />
+                    <span data-bind="text: unit"></span><br />
+                    <label>粗利</label><br />
+                    <span data-bind="text: gross"></span><br />
+                    <label>純利益</label><br />
+                    <span data-bind="text: profit"></span><br />
                 </div>
             </div>
 
