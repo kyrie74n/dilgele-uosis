@@ -42,24 +42,57 @@
                 <div class="col-md-4">
                     <h2>テンプレを選択</h2><br />
                     <label>種類を選択</label>
-                        <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default">
-                    <input type="radio" name="HPSP" id="option1" autocomplete="off">HP
-                </label>
-                <label class="btn btn-default">
-                    <input type="radio" name="HPSH" id="option2" autocomplete="off">SP
-                </label>
-            </div>
+                    <div class="btn-group form-group" data-toggle="buttons" data-bind="radio: checkType">
+                        <label class="btn btn-default">
+                            <input type="radio" value="HP" name="HPSP" autocomplete="off">HP
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" value="SP" name="HPSP" autocomplete="off">SP
+                        </label>
+                    </div>
+                    <hr />
+                    <label>固定費用：<span data-bind="text: material"></span></label><br/>
+                    フラスコ×1：120シルバー<br />
+                    <span data-bind="text: material1name"></span>：<span data-bind="text: material1"></span><br />
+                    <hr />
+                    <div class="form-group">
+                    <label><span data-bind="text: material2name"></span>原価を入力</label>
+                      <div class="col-10">
+                        <input class="form-control" type="number" data-bind="value: material2">
+                      </div>
+                    </div>
                     <br />
                     <label>手数料を選択</label>
-                <div class="btn-group" data-toggle="buttons">
-                        
-                </div>
-                    
-		    <div class="input-group">
-                    <input class="form-control" data-bind="value: personName"></input>
-                    <span data-bind="text: personAge"></span>
-		    </div>
+                    <div class="btn-group form-group" data-toggle="buttons" data-bind="radio: charge">
+                        <label class="btn btn-default">
+                            <input type="radio" name="chargeOpt" value="10" />1.0%/1d
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="chargeOpt" value="15" />1.5%/3d
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="chargeOpt" value="20" />2.0%/5d
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="chargeOpt" value="25" />2.5%/7d
+                        </label>
+                    </div>
+                    <br />
+                    <label>税率を選択</label>
+                    <div class="btn-group form-group" data-toggle="buttons" data-bind="radio: tax">
+                        <label class="btn btn-default">
+                            <input type="radio" name="taxOpt" value="10" />10%
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="taxOpt" value="30" />30%
+                        </label>
+                    </div>
+                    <hr />
+                    <label>test</label>
+                    <div class="input-group">
+                            <input class="form-control"></input>
+                            <span data-bind="text: personAge"></span>
+                    </div>
                 </div>
             </div>
 
@@ -68,12 +101,12 @@
                 <p>&copy; kyrie</p>
             </footer>
         </div>
-
         <script src="Scripts/jquery-3.1.1.js"></script>
 
         <script src="Scripts/bootstrap.js"></script>
         <script src="Scripts/respond.js"></script>
-        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/faulknercs/Knockstrap/v1.3.0/build/knockstrap.min.js"></script>
         <script type="text/javascript" src="Models/dataModels.js"></script>
 
     </body>
