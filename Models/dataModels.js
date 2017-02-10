@@ -1,13 +1,7 @@
-function myViewModel(){
-    this.personName = ko.observable();
-    this.personAge = ko.computed(function(){
-        return this.personName();
-    }, this);
-} ;
-
 function calculateModel(){
     this.checkType = ko.observable("HP");
     this.charge = ko.observable("10");
+    this.price = ko.observable(2000);
     this.tax = ko.observable("10");
     this.material1name = ko.computed(function(){
         return this.checkType() == "HP" ? "ヴァレリジョナス×2" : "ヴァルナレーザ×3";
@@ -25,6 +19,12 @@ function calculateModel(){
     this.personAge = ko.computed(function(){
         return this.charge();
     }, this);
+
+    this.profit = ko.computed(function(){
+        return this.price() - (this.material() + this.material2())/5 ;
+
+    }, this);
+    
     
 };
 
